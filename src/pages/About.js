@@ -78,7 +78,7 @@ const About = () => {
                     </div>
                 </div>
             </section>
-            <section className='py-5 why bg-black'>
+            <section className='py-5 why bg-black d-none'>
                 <div className="container">
                     <div className="row justify-content-center">
                         <h3>Our Team</h3>
@@ -105,7 +105,7 @@ const About = () => {
                                     assignment with Dell, he was Director & General Manager - SME business...
                                 </p>
                             </div>
-                        </div>            
+                        </div>
                     </div>
                 </div>
             </section>
@@ -117,27 +117,37 @@ const About = () => {
                         <h3>Meet the Director And Founder</h3>
                     </div>
                     <div className="planer-box">
-                        <div className="row align-items-center mb-4 px-lg-5 px-4 text-center">
-                            <div className="col-md-6 d-md-block d-none">
-                                <img src={require("../assets/images/planer1.png")} className="img-fluid" />
+                        <div className="row align-items-center mb-4 px-lg-5 px-4">
+                            <div className="col-md-4 order-md-first order-last">
+                                <img src={require("../assets/images/Arun.png")} className="img-fluid" />
                             </div>
-                            <div className="col-md-6">
+                            <div className="col-md-8">
+
+                                {/* <p className='found-name'>Arun A R</p>
+                                <p className='position'>Founder and CEO</p> */}
+
+
                                 <p>
-                                    Meet Arun A R, the Director and Co-founder of The Stage 365, an ambitious MBA graduate from Karnataka. In 2005, he sparked the inception of The Stage 365 as a college side project, and today, it stands as a testament to his entrepreneurial prowess. Arun's journey, rooted in academia, seamlessly integrates with his passion for creating unforgettable experiences in the realm of event management. The Stage 365 is not just a company; it's Arun's legacy of excellence, creativity, and enduring client relationships. Join us in the visionary world of Arun A R, where every event unfolds as a chapter in the narrative of exceptional celebration.</p>
-                            </div>
-                            <div className="col-md-6 d-md-none d-block">
-                                <img src={require("../assets/images/planer1.png")} className="img-fluid" />
-                            </div>
-                        </div>
-                        <div className="row align-items-center mb-4 px-lg-5 px-4 text-center">
-                            <div className="col-md-6">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariat Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                            </div>
-                            <div className="col-md-6">
-                                <img src={require("../assets/images/planer2.png")} className="img-fluid" />
+                                    Arun A R, founder and CEO of The Stage 365 and Area24 , leading real estate firms in Bangalore, began his entrepreneurial journey in college, founding "The Stage 365" event management company. Transitioning to real estate in 2014, he established Stage 365 with a commitment to integrity and excellence. Today, Stage 365 offers a range of services including Corporate Galas, Conferences, Social Soirees and Parties etc. <br /> <br />
+                                    Committed to operating with utmost integrity and ethical standards, The Stage 365 pledges to deliver superior service, fostering trust and producing exceptional results.
+                                </p>
                             </div>
                         </div>
-                        
+                        <div className="row align-items-center mb-4 px-lg-5 px-4">
+                            <div className="col-md-8">
+                                {/* <p className='found-name'>Lavanya</p>
+                                <p className='position'>COO</p> */}
+                                <p>Lavanya, COO at Stage 365, seamlessly merges technical expertise with artistic flair, transitioning from technology to interior design with an MCA degree. Leading operations, she ensures meticulous attention to detail and client satisfaction, fostering a culture of innovation and excellence. <br /> <br />
+
+                                    Her visionary leadership propels Stage 365 to set new industry standards, creating transformative spaces that exceed client expectations, marrying technology with creativity.
+
+                                </p>
+                            </div>
+                            <div className="col-md-4 text-end">
+                                <img src={require("../assets/images/Lavanya.png")} className="img-fluid" />
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -177,15 +187,15 @@ const About = () => {
                                 }}
                             >
                                 <div className="item">
-                            <p className="mb-3 mt-5">I had great experience with the stage 365  the team was professional, organized, and highly efficient.</p>
-                            <img src={require("../assets/images/Photo.png")} className="rounded-circle" />
-                            <h5 className="mt-3">Zaiba Khanum</h5>
-                        </div>
-                        <div className="item">
-                            <p className="mb-3 mt-5">Stage365 conducts events in a grand manner and the teamwork is wonderful. Very professional team that exhibits good attitude towards vendors and clients.</p>
-                            <img src={require("../assets/images/Photo.png")} className="rounded-circle" />
-                            <h5 className="mt-3">Pushpa M S</h5>
-                        </div> 
+                                    <p className="mb-3 mt-5">I had great experience with the stage 365  the team was professional, organized, and highly efficient.</p>
+                                    <img src={require("../assets/images/Photo.png")} className="rounded-circle d-none" />
+                                    <h5 className="mt-3">Zaiba Khanum</h5>
+                                </div>
+                                <div className="item">
+                                    <p className="mb-3 mt-5">Stage365 conducts events in a grand manner and the teamwork is wonderful. Very professional team that exhibits good attitude towards vendors and clients.</p>
+                                    <img src={require("../assets/images/Photo.png")} className="rounded-circle d-none" />
+                                    <h5 className="mt-3">Pushpa M S</h5>
+                                </div>
 
                             </OwlCarousel>
                         </div>

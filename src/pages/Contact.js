@@ -23,10 +23,10 @@ const Contact = () => {
         <meta name="keywords" content="React, Page, Title, Description, Keywords" />
     </Helmet>
       <Header />
-      <div className="breadcum pt-5" style={{ backgroundColor: 'rgb(0, 0, 0)', height: '85vh' }}>
+      <div className="breadcum pt-5" style={{ backgroundColor: 'rgb(0, 0, 0)', height: '85vh', overflow: 'hidden' }}>
         <div className="row justify-content-center" style={{backgroundColor: '#000'}}>
           <div className="col-md-10 mt-5">
-            <video width="100%" height="450" autoPlay loop muted id="vid">
+            <video width="100%" height="400" autoPlay loop muted id="vid">
               <source src={videoSrc} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -45,20 +45,10 @@ const Contact = () => {
             <div className="col-md-6 col-12 mb-4 md-mb-0">
               <div className="contact-info-box">
                 <h5>Contact Information</h5>
-                <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-geo-alt-fill me-2" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                            </svg>
-                            level 14/15, Concorde block, UB City, Vittal Mallya Rd, KG Halli, D' Souza Layout, Ashok
-                            Nagar,
-                            Bengaluru, Karnataka 560001
-                        </p>
-
-                <p><i className="fas fa-map-marker-alt"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet, consectetu</p>
-                <p><i className="fas fa-envelope"></i>&nbsp;&nbsp; abc@gmail.com</p>
-                <p><i className="fas fa-phone-alt"></i>&nbsp;&nbsp; 1234567890</p>
+                <p className='mt-3 d-none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                <p className='mt-3'><i className="fas fa-map-marker-alt"></i>&nbsp;&nbsp; Level 15, Concorde block, UB city, Vittal Mallya Road, Bengaluru-560001</p>
+                <p><i className="fas fa-envelope"></i>&nbsp;&nbsp;  contact@thestage365.com</p>
+                <p><i className="fas fa-phone-alt"></i>&nbsp;&nbsp; 9606133309</p>
 
                 <ul className="contact-social">
                   <li><Link to="#" target="_blank"><img src={require("../assets/images/insta.png")} className="img-fluid" alt="Instagram" /></Link></li>
@@ -91,7 +81,6 @@ const Contact = () => {
                     <div className="col-md-3">
                       <select {...register('ccode')} className="form-control md-mb-0 mb-2">
                         <option value="+91">91</option>
-                        <option value="+92">92</option>
                       </select>
                     </div>
                     <div className="col-md-9">

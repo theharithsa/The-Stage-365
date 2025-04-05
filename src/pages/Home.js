@@ -4,45 +4,19 @@ import { Helmet } from 'react-helmet';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-
-
-
+import $ from 'jquery';
 
 import Header from '../componets/Header';
 import Footer from '../componets/Footer';
 
 const Home = () => {
+
     useEffect(() => {
         const addZoomClass = (event) => {
             $(event.target).find('.owl-item').eq(0).addClass('zoomed active-center');
         };
         //const location = useLocation();
         const owl = $('#owl-gallery2');
-
-        owl.owlCarousel({
-            items: 4,
-            autoplay: true,
-            loop: true,
-            margin: 30,
-            nav: true,
-            dots: false,
-            navText: [
-                '<i class="fas fa-arrow-left"></i>',
-                '<i class="fas fa-arrow-right"></i>'
-            ],
-            responsive: {
-                0: {
-                    items: 1
-                },
-                768: {
-                    items: 3
-                },
-                1024: {
-                    items: 4
-                }
-            },
-            onInitialized: addZoomClass
-        });
 
         const slideNext = () => {
             owl.trigger('next.owl.carousel');
@@ -222,7 +196,7 @@ const Home = () => {
                                             <p>Corporate Events</p>
                                         </div>
                                     </div>
-                                </div>                                
+                                </div>
                                 <div className="col-md-3 col-12 pb-4">
                                     <div className="offerbox">
                                         <div className="iinerbox p-0 py-2">
@@ -245,7 +219,7 @@ const Home = () => {
                 <div className="container-fluid px-lg-5 px-4">
                     <div className="row align-items-center event-top">
                         <div className="col-md-6">
-                            <img src={require("../assets/images/eventmanagement-service.png")} className="img-fluid mb-4 md-mb-0" />
+                            <img src={require("../assets/images/EventManagemee.webp")} className="img-fluid mb-4 md-mb-0" />
                         </div>
                         <div className="col-md-6">
                             <div className="row align-items-center">
@@ -270,7 +244,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="col-md-6 mt-4 mt-md-5">
-                            <img src={require("../assets/images/Social Celebratins.png")} className="img-fluid mb-4 md-mb-0" />
+                            <img src={require("../assets/images/SocialCelebration.webp")} className="img-fluid mb-4 md-mb-0" />
                         </div>
                         <div className="col-md-6 mt-4 mt-md-5 d-block d-md-none">
                             <div className="row align-items-center">
@@ -284,7 +258,7 @@ const Home = () => {
                         </div>
 
                         <div className="col-md-6 mt-4 mt-md-5">
-                            <img src={require("../assets/images/Corporate Celebration.png")} className="img-fluid mb-4 md-mb-0" />
+                            <img src={require("../assets/images/CorporateCelebration.webp")} className="img-fluid mb-4 md-mb-0" />
                         </div>
                         <div className="col-md-6 mt-4 mt-md-5">
                             <div className="row align-items-center">
@@ -316,116 +290,7 @@ const Home = () => {
                             </p>
                         </div>
                         <div className="col-md-6 col-12">
-
-                            <img src={require("../assets/images/eventmanagementservice.png")} className="img-fluid mb-4 md-mb-0" />
-                            {/* <div className="row owl-box"> */}
-                            {/* <div className="owl1 col-md-6 p-0">
-                        <OwlCarousel
-                        className="owl-carousel owl-theme"
-                        id="owl1"
-                        loop
-                        margin={10}
-                        autoplay
-                        autoplayTimeout={3000}
-                        autoplayHoverPause={false}
-                        dots={false}
-                        responsive={{
-                            0: {
-                            items: 1
-                            },
-                            600: {
-                            items: 1
-                            },
-                            1000: {
-                            items: 1
-                            }
-                        }}
-                        >
-                        <div className="item">
-                            <img
-                            src={require("../assets/images/Rectangle 250.png")}
-                            className="img-fluid"
-                            alt="Image 1"
-                            />
-                        </div>
-                        <div className="item">
-                            <img
-                            src={require("../assets/images/Rectangle 251.png")}
-                            className="img-fluid"
-                            alt="Image 1"
-                            />
-                        </div>
-                        <div className="item">
-                            <img
-                            src={require("../assets/images/Rectangle 252.png")}
-                            className="img-fluid"
-                            alt="Image 1"
-                            />
-                        </div>
-                        <div className="item">
-                            <img
-                            src={require("../assets/images/Rectangle 253.png")}
-                            className="img-fluid"
-                            alt="Image 1"
-                            />
-                        </div>
-                        </OwlCarousel>
-                    </div>
-
-                    <div className="owl2 col-md-6 p-0">
-                        <OwlCarousel
-                        className="owl-carousel owl-theme"
-                        id="owl2"
-                        loop
-                        margin={10}
-                        autoplay
-                        autoplayTimeout={3000}
-                        autoplayHoverPause={false}
-                        dots={false}
-                        responsive={{
-                            0: {
-                            items: 1
-                            },
-                            600: {
-                            items: 1
-                            },
-                            1000: {
-                            items: 1
-                            }
-                        }}
-                        >
-                        <div className="item">
-                            <img
-                            src={require("../assets/images/Rectangle 16.png")}
-                            className="img-fluid"
-                            alt="Image 1"
-                            />
-                        </div>
-                        <div className="item">
-                            <img
-                            src={require("../assets/images/Rectangle 18.png")}
-                            className="img-fluid"
-                            alt="Image 1"
-                            />
-                        </div>
-                        <div className="item">
-                            <img
-                            src={require("../assets/images/Rectangle 19.png")}
-                            className="img-fluid"
-                            alt="Image 1"
-                            />
-                        </div>
-                        <div className="item">
-                            <img
-                            src={require("../assets/images/Rectangle 20.png")}
-                            className="img-fluid"
-                            alt="Image 1"
-                            />
-                        </div>
-                        
-                        </OwlCarousel>
-                    </div> */}
-                            {/* </div> */}
+                            <img src={require("../assets/images/EventService.webp")} className="img-fluid mb-4 md-mb-0" />
                         </div>
                     </div>
                 </div>
@@ -477,59 +342,213 @@ const Home = () => {
                             }
                         }}
                     >
+
                         <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 251.png")} />
+                            <a
+                                data-fancybox="gallery-1"
+                                href={require("../assets/images/sunburn-1.jpg")}
+                                data-expand="-1"
+                                className="lazy bg-white"
+                            >
+                                <img
+                                    src={require("../assets/images/sunburn-1.jpg")}
+                                    alt="Gallery Image" className="homeGallery"
+                                />
+                            </a>
+                        </div>
+
+                        <div className="item py-5 px-1 mt-5">
+                            <a
+                                data-fancybox="gallery-1"
+                                href={require("../assets/images/sunburn-2.jpg")}
+                                data-expand="-1"
+                                className="lazy bg-white"
+                            >
+                                <img
+                                    src={require("../assets/images/sunburn-2.jpg")}
+                                    alt="Gallery Image" className="homeGallery"
+                                />
+                            </a>
+                        </div>
+
+                        <div className="item py-5 px-1 mt-5">
+                            <a
+                                data-fancybox="gallery-1"
+                                href={require("../assets/images/sunburn-3.jpg")}
+                                data-expand="-1"
+                                className="lazy bg-white"
+                            >
+                                <img
+                                    src={require("../assets/images/sunburn-3.jpg")}
+                                    alt="Gallery Image" className="homeGallery"
+                                />
+                            </a>
+                        </div>
+
+                        <div className="item py-5 px-1 mt-5">
+                            <a
+                                data-fancybox="gallery-1"
+                                href={require("../assets/images/sunburn-4.jpg")}
+                                data-expand="-1"
+                                className="lazy bg-white"
+                            >
+                                <img
+                                    src={require("../assets/images/sunburn-4.jpg")}
+                                    alt="Gallery Image" className="homeGallery"
+                                />
+                            </a>
                         </div>
                         <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 252.png")} />
+                            <a
+                                data-fancybox="gallery-1"
+                                href={require("../assets/images/college.jpeg")}
+                                data-expand="-1"
+                                className="lazy bg-white"
+                            >
+                                <img
+                                    src={require("../assets/images/college.jpeg")}
+                                    alt="Gallery Image" className="homeGallery"
+                                />
+                            </a>
                         </div>
                         <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 253.png")} />
+                            <a
+                                data-fancybox="gallery-1"
+                                href={require("../assets/images/Gallery1.webp")}
+                                data-expand="-1"
+                                className="lazy bg-white"
+                            >
+                                <img
+                                    src={require("../assets/images/Gallery1.webp")}
+                                    alt="Gallery Image" className="homeGallery"
+                                />
+                            </a>
                         </div>
                         <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 16.png")} />
+                            <a
+                                data-fancybox="gallery-1"
+                                href={require("../assets/images/Gallery2.webp")}
+                                data-expand="-1"
+                                className="lazy bg-white"
+                            >
+                                <img
+                                    src={require("../assets/images/Gallery2.webp")}
+                                    alt="Gallery Image" className="homeGallery"
+                                />
+                            </a>
                         </div>
                         <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 18.png")} />
+                            <a
+                                data-fancybox="gallery-1"
+                                href={require("../assets/images/Gallery3.webp")}
+                                data-expand="-1"
+                                className="lazy bg-white"
+                            >
+                                <img
+                                    src={require("../assets/images/Gallery3.webp")}
+                                    alt="Gallery Image" className="homeGallery"
+                                />
+                            </a>
                         </div>
                         <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 19.png")} />
+                            <a
+                                data-fancybox="gallery-1"
+                                href={require("../assets/images/Gallery4.webp")}
+                                data-expand="-1"
+                                className="lazy bg-white"
+                            >
+                                <img
+                                    src={require("../assets/images/Gallery4.webp")}
+                                    alt="Gallery Image" className="homeGallery"
+                                />
+                            </a>
                         </div>
                         <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 20.png")} />
+                            <a
+                                data-fancybox="gallery-1"
+                                href={require("../assets/images/Gallery5.webp")}
+                                data-expand="-1"
+                                className="lazy bg-white"
+                            >
+                                <img
+                                    src={require("../assets/images/Gallery5.webp")}
+                                    alt="Gallery Image" className="homeGallery"
+                                />
+                            </a>
+                        </div>
+                        <div className="item py-5 px-1 mt-5">
+                            <a
+                                data-fancybox="gallery-1"
+                                href={require("../assets/images/audi-launch2.jpg")}
+                                data-expand="-1"
+                                className="lazy bg-white"
+                            >
+                                <img
+                                    src={require("../assets/images/audi-launch2.jpg")}
+                                    alt="Gallery Image" className="homeGallery"
+                                />
+                            </a>
+                        </div>
+                        <div className="item py-5 px-1 mt-5">
+                            <a
+                                data-fancybox="gallery-1"
+                                href={require("../assets/images/Gallery6.webp")}
+                                data-expand="-1"
+                                className="lazy bg-white"
+                            >
+                                <img
+                                    src={require("../assets/images/Gallery6.webp")}
+                                    alt="Gallery Image" className="homeGallery"
+                                />
+                            </a>
+                        </div>
+                        <div className="item py-5 px-1 mt-5">
+                            <a
+                                data-fancybox="gallery-1"
+                                href={require("../assets/images/Gallery7.webp")}
+                                data-expand="-1"
+                                className="lazy bg-white"
+                            >
+                                <img
+                                    src={require("../assets/images/Gallery7.webp")}
+                                    alt="Gallery Image" className="homeGallery"
+                                />
+                            </a>
+                        </div>
+
+                        <div className="item py-5 px-1 mt-5">
+                            <a
+                                data-fancybox="gallery-1"
+                                href={require("../assets/images/audi-launch.jpg")}
+                                data-expand="-1"
+                                className="lazy bg-white"
+                            >
+                                <img
+                                    src={require("../assets/images/audi-launch.jpg")}
+                                    alt="Gallery Image" className="homeGallery"
+                                />
+                            </a>
                         </div>
 
                     </OwlCarousel>
+                </div>
 
+            </section>
 
-                    <div className="owl-carousel" id="owl-gallery2">
-                        <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 250.png")} />
+            {/* Testimonial Section */}
+            <section className="testimonial py-5">
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-md-12">
+                            <h6>YouTube</h6>
+                            <h3>Virtual Glimpse of Our Work
+                            </h3>
                         </div>
-                        <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 251.png")} />
-                        </div>
-                        <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 252.png")} />
-                        </div>
-                        <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 253.png")} />
-                        </div>
-                        <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 16.png")} />
-                        </div>
-                        <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 18.png")} />
-                        </div>
-                        <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 19.png")} />
-                        </div>
-                        <div className="item py-5 px-1 mt-5">
-                            <img src={require("../assets/images/Rectangle 20.png")} />
+                        <div className="col-md-12 pt-5">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/tk3pK7KX5bU?si=P7l5_y1590dMTr1v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
-
             </section>
 
             {/* Testimonial Section */}
@@ -569,12 +588,12 @@ const Home = () => {
                             >
                                 <div className="item">
                                     <p className="mb-3 mt-5">I had great experience with the stage 365  the team was professional, organized, and highly efficient.</p>
-                                    <img src={require("../assets/images/Photo.png")} className="rounded-circle" />
+                                    <img src={require("../assets/images/Photo.png")} className="rounded-circle d-none" />
                                     <h5 className="mt-3">Zaiba Khanum</h5>
                                 </div>
                                 <div className="item">
                                     <p className="mb-3 mt-5">Stage365 conducts events in a grand manner and the teamwork is wonderful. Very professional team that exhibits good attitude towards vendors and clients.</p>
-                                    <img src={require("../assets/images/Photo.png")} className="rounded-circle" />
+                                    <img src={require("../assets/images/Photo.png")} className="rounded-circle  d-none" />
                                     <h5 className="mt-3">Pushpa M S</h5>
                                 </div>
 
@@ -585,21 +604,21 @@ const Home = () => {
             </section>
 
             {/* Planners Section */}
-            <section class="planners py-5">
+            <section class="planners py-5 d-none">
                 <div class="container">
                     <div class="row justify-content-center text-center">
                         <div class="col-md-12">
                             <h3>Meet the Planners</h3>
                         </div>
                         <div class="col-md-4 md-mb-0 mb-4">
-                            <img src={require("../assets/images/Rectangle 257.png")} className="img-fluid mb-4" />
+                            <img src={require("../assets/images/Arun.png")} className="img-fluid mb-4" />
                             <h4>Arun A R</h4>
                             <span>Director and Co-founder</span>
                         </div>
 
                         <div class="col-md-4">
-                            <img src={require("../assets/images/Rectangle 259.png")} className="img-fluid mb-4" />
-                            <h4>Arun A R</h4>
+                            <img src={require("../assets/images/Lavanya.png")} className="img-fluid mb-4" />
+                            <h4>Lavanya</h4>
                             <span>Director and Co-founder</span>
                         </div>
 
